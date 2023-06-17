@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap" rel="stylesheet">
+    <title>clientes</title>
+    <link rel="stylesheet" href="./css/Pagina_clientes.css">
+</head>
+
+<body>
+    <main class="contenedor_general">
+        <article class="contenedor_menu">
+            <header class="header">
+                <div class="content">
+                    <h2 class="title-nav">admin</h2>
+                    <img src="https://t4.ftcdn.net/jpg/02/27/45/09/360_F_227450952_KQCMShHPOPebUXklULsKsROk5AvN6H1H.jpg"
+                        class="admin" alt="">
+                    <ul class="ul-nav">
+                        <li class="li-nav"><a href="./index.html" id="inicio">Inicio</a> </li>
+                        <li class="li-nav"><a href="./index2.html" id="clientes"> clientes</a> </li>
+                        <li class="li-nav"><a href="./index3.html" id="creditos"> creditos</a> </li>
+                    </ul>
+                    </ul>
+                    <button id="salir">cerrar sesion</button>
+                </div>
+            </header>
+        </article>
+        <article class="contenedor_inicio">
+            <div class="inicio">
+                <h2>clientes</h2>
+            </div>
+            <section class="secciones">
+                <article class="articulo1">
+                    <button id="abrir-modal" class="botones-de-referencia">Crear cliente</button>
+                    <div class="d-flex" role="search">
+                        <input class="form-control" style="width: 14rem;" type="search" placeholder="Nit" aria-label="Search" id="search-input">
+                        <button class="btn btn-outline-success" type="" id="search-button">Search</button>
+                      </div>
+                      
+                    <div class="table-header">
+                        <table class="table">
+                            <tr id="tr-table">
+                                <th scope="col">nombre</th>
+                                <th scope="col">apellido</th>
+                                <th scope="col">NIT/CC</th>
+                                <th scope="col">direccion</th>
+                                <th scope="col">ciudad</th>
+                                <th scope="col">telefono</th>
+                                <th scope="col">cupo disponible</th>
+                                <th scope="col">estado</th>
+                                <th scope="col">acciones</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="table-list" id="client-list"></div>
+                </article>
+            </section>
+        </article>
+
+    </main>
+
+    <section>
+        <div class="modal" id="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <button class="modal-close is-large" aria-label="close" id="cerrarModal"></button>
+                <form class="formulario" id="task-form">
+                    <div class="izquierda">
+                        <div class="crud-header"></div>
+                        <label id="label-form" for="">Nombres:</label>
+                        <input id="inputnombre" type="text" placeholder="Nombres" class="input-form" />
+                        <label id="label-form" for="">NIT/CC:</label>
+                        <input id="inputnit" type="number" placeholder="NIT/CC" class="input-form" />
+                        <label id="label-form" for="">Ciudad:</label>
+                        <select  class="input-form" aria-label="Default select example" id="ciudad">
+                            <option selected>seleccione</option>
+                            <option value="Bucaramanga">Bucaramanga</option>
+                            <option value="Bogota DC">Bogota DC</option>
+                            <option value="Cartagena">Cartagena</option>
+                            <option value="Cali">Cali</option>
+                            <option value="Medellin">Medellin</option>
+                        </select>
+                        <label id="label-form" for="">Estado de Credito:</label>
+                        <select class="input-form" aria-label="Default select example" id="estado">
+                            <div class="input-form">
+                                <option selected>seleccione</option>
+                                <option value="Activado">Activado</option>
+                                <option value="Desactivado">Desactivado</option>
+                        </select>
+                        <div class="botones">
+                            <div class="block">
+                                <button id="guardarCliente" disabled class="button">Guardar Cambios</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="centro">
+                        <h2 id="titulo2">Datos Personales</h2>
+                        <div class="crud-header-medio"></div>
+                        <label id="label-form" for="">Apellidos:</label>
+                        <input type="text" id="inputapellido" placeholder="Apellidos" class="input-form" />
+                        <label id="label-form" for="">Direccion:</label>
+                        <input type="text" id="inputdireccion" placeholder="Direccion" class="input-form" />
+                        <label id="label-form" for="">Telefono:</label>
+                        <input type="number" id="inputtelefono" placeholder="Telefono" class="input-form" />
+                    </div>
+                    <div class="derecha">
+                        <div class="crud-header"></div>
+                        <label id="label-form" for="">Cupo Total:</label>
+                        <input type="number" id="inputcupoTot" placeholder="Cupo Total" class="input-form" />
+                        <label id="label-form" for="">Cupo Disponible:</label>
+                        <input type="number" id="inputdispo" placeholder="Cupo Disponible" class="input-form" /> <br>
+                        <label id="label-form" for="">Dias de Garantia:</label>
+                        <input type="number" id="inputdiasgar" placeholder="Dias de Garantia" class="input-form" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="./javascript/index.js" type="module"></script>
+</body>
+</html>
+
